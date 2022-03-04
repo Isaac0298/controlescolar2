@@ -38,7 +38,4 @@ public class SituacionAcademica {
         this.estatus = estatus;
     }
 
-    public void setEstatus(String aTRUE) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-}
+  }

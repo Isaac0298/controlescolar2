@@ -28,6 +28,19 @@ public class Principal {
         alumno2.setApellidoPaterno("Martinez");
         alumno2.setApellidoMaterno("Arias");
         alumno2.setBoleta(2015176978);
+                    
+        Materia materia1= new Materia();
+        materia1.setNombre("JAva");
+        materia1.setCreditos("6");
+        Materia materia2= new Materia();
+        materia2.setNombre("Redes");
+        materia2.setCreditos("8");
+        
+        Curso curso1 = new Curso();
+         curso1.setHorario("10am - 11:30am");
+         curso1.addAlumno(alumno1);
+         curso1.addAlumno(alumno2);
+         curso1.setMateria(materia2);
         
         Profesor profe1 = new Profesor();
         profe1.setNombre("Jose");
@@ -41,23 +54,17 @@ public class Principal {
         profe2.setApellidoMaterno("Haro");
         profe2.setNumeroEmpleado("002");
         profe2.setRfc("keniebvvnoenven");
+        profe2.addCurso(curso1);
         
-        
-        
-        Curso curso1 = new Curso();
-        
-        Materia materia1= new Materia();
-        materia1.setNombre("JAva");
-        materia1.setCreditos("6");
-        Materia materia2= new Materia();
-        materia2.setNombre("Redes");
-        materia2.setCreditos("8");
-        
-        
+        curso1.setProfesor(profe1);
+     
         Grupo grupo1= new Grupo();
         grupo1.setSecuencia("4NV51");
+        grupo1.addMateria(materia1);
+        grupo1.addMateria(materia2);
         Grupo grupo2= new Grupo();
         grupo2.setSecuencia("4NV51");
+        grupo2.addMateria(materia2);
         
         Academia academia1 = new Academia();
         academia1.setNombreAcademia("computacion");
@@ -68,11 +75,23 @@ public class Principal {
         SituacionAcademica situacionA1= new SituacionAcademica();
         situacionA1.setCarrera("Ingenieria en informatica");
         situacionA1.setSemestre("Sexto");
-        situacionA1.setEstatus("TRUE");
+        situacionA1.setEstatus(true);
         SituacionAcademica situacionA2= new SituacionAcademica();
         situacionA2.setCarrera("Ingenieria en administracion");
         situacionA2.setSemestre("Quinto");
-        situacionA2.setEstatus("TRUE");
+        situacionA2.setEstatus(true);
+        
+        alumno1.setSituacion(situacionA1);
+        alumno2.setSituacion(situacionA2);
+        
+        //mostrar curso
+        System.out.println("---------Curso 1-----------");
+        System.out.println(curso1.getHorario());
+        System.out.println(curso1.getMateria().getNombre());
+        System.out.println(curso1.getProfesor().getNombre() + " " + curso1.getProfesor().getApellidoPaterno());
+        System.out.println("Alumnos curso 1");
+        curso1.printAlumnos();
+        
         
        
         
