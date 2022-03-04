@@ -30,4 +30,5 @@ public class Academia {
     public void setMaterias(ArrayList<Materia> materias) {
         this.materias = materias;
     }
+    
 }
