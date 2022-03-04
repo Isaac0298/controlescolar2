@@ -13,7 +13,11 @@ import mx.com.upiicsa.controlescolar2.academia.Materia;
  */
 public class Academia {
     private String nombreAcademia;
-    private ArrayList<Materia> materias;
+    private ArrayList<Materia> materia;
+    
+    public Academia(){
+    materia = new ArrayList<>();
+    }
 
     public String getNombreAcademia() {
         return nombreAcademia;
@@ -24,11 +28,11 @@ public class Academia {
     }
 
     public ArrayList<Materia> getMaterias() {
-        return materias;
+        return materia;
     }
 
     public void setMaterias(ArrayList<Materia> materias) {
-        this.materias = materias;
+        this.materia = materias;
     }
     
 }

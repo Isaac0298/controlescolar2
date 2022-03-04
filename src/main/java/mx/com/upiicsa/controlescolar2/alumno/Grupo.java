@@ -14,6 +14,10 @@ import mx.com.upiicsa.controlescolar2.academia.Materia;
 public class Grupo {
     private String secuencia;
     private ArrayList<Materia> materia;
+    
+    public Grupo(){
+    materia = new ArrayList<>();
+}
 
     public String getSecuencia() {
         return secuencia;
