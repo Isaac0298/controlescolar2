@@ -13,10 +13,10 @@ import mx.com.upiicsa.controlescolar2.academia.Materia;
  */
 public class Grupo {
     private String secuencia;
-    private ArrayList<Materia> materia;
+    private ArrayList<Materia> materias;
     
     public Grupo(){
-    materia = new ArrayList<>();
+    materias = new ArrayList<>();
 }
 
     public String getSecuencia() {
@@ -27,11 +27,35 @@ public class Grupo {
         this.secuencia = secuencia;
     }
 
-    public ArrayList<Materia> getMateria() {
-        return materia;
+        public void addMateria(Materia materia)
+    {
+        materias.add(materia);
     }
-
-    public void setMateria(ArrayList<Materia> materia) {
-        this.materia = materia;
+    
+    public void printList()
+    {
+        for(Materia materia: materias)
+        {
+            System.out.println(materia.getNombre());
+            System.out.println(materia.getCreditos());
+        }
     }
+    /*
+    public static void main(String[] args) {
+        Materia materia1 = new Materia();
+        materia1.setNombre("Algebra");
+        materia1.setCreditos("4.5");
+        
+        Materia materia2 = new Materia();
+        materia2.setNombre("Sociologia");
+        materia2.setCreditos("6.5");
+        
+        Grupo grupo1 = new Grupo();
+        grupo1.setSecuencia("26NV65");
+        grupo1.addMateria(materia1);
+        grupo1.addMateria(materia2);
+        grupo1.printList();
+        
+    }
+*/
 }

@@ -13,10 +13,10 @@ import mx.com.upiicsa.controlescolar2.academia.Materia;
  */
 public class Academia {
     private String nombreAcademia;
-    private ArrayList<Materia> materia;
+    private ArrayList<Materia> materias;
     
     public Academia(){
-    materia = new ArrayList<>();
+    materias = new ArrayList<>();
     }
 
     public String getNombreAcademia() {
@@ -26,13 +26,20 @@ public class Academia {
     public void setNombreAcademia(String nombreAcademia) {
         this.nombreAcademia = nombreAcademia;
     }
-
-    public ArrayList<Materia> getMaterias() {
-        return materia;
+    
+    public void addMateria(Materia materia)
+    {
+        materias.add(materia);
     }
-
-    public void setMaterias(ArrayList<Materia> materias) {
-        this.materia = materias;
+    
+    public void printMaterias()
+    {
+         for(Materia materia: materias)
+        {
+            System.out.println(materia.getNombre());
+            System.out.println(materia.getCreditos());
+        }
     }
+    
     
 }

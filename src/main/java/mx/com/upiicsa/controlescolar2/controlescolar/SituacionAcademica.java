@@ -10,7 +10,7 @@ package mx.com.upiicsa.controlescolar2.controlescolar;
  */
 public class SituacionAcademica {
     private String carrera;
-    //amterias//
+    //materias//
     private String semestre;
     private Boolean estatus;
 
