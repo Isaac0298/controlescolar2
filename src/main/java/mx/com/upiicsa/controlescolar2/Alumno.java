@@ -13,28 +13,12 @@ import mx.com.upiicsa.controlescolar2.academia.Curso;
 import mx.com.upiicsa.controlescolar2.controlescolar.SituacionAcademica;
 
 public class Alumno {
+    
     private String nombre;
     private String apellidoPaterno;
     private String apellidoMaterno;
     private int boleta;
-    private ArrayList<Curso> cursos;
     private SituacionAcademica situacion;
-
-    public ArrayList<Curso> getCursos() {
-        return cursos;
-    }
-
-    public void setCursos(ArrayList<Curso> cursos) {
-        this.cursos = cursos;
-    }
-
-    public SituacionAcademica getSituacion() {
-        return situacion;
-    }
-
-    public void setSituacion(SituacionAcademica situacion) {
-        this.situacion = situacion;
-    }
 
     public String getNombre() {
         return nombre;
@@ -67,8 +51,19 @@ public class Alumno {
     public void setBoleta(int boleta) {
         this.boleta = boleta;
     }
-    
 
+    public SituacionAcademica getSituacion() {
+        return situacion;
+    }
+
+    public void setSituacion(SituacionAcademica situacion) {
+        this.situacion = situacion;
+    }
+ 
+
+
+
+    
     
     
     

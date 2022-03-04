@@ -37,18 +37,22 @@ public class Curso {
         this.horario = horario;
     }
 
-    public Profesor getProfesores() {
+    public Profesor getProfesor() {
         return profesores;
     }
 
-    public void setProfesores(Profesor profesores) {
+    public void setProfesor(Profesor profesores) {
         this.profesores = profesores;
     }
 
-    public ArrayList<Alumno> getAlumnos() {
-        return alumnos;
+     
+       public void addAlumno(Alumno alumno){
+        alumnos.add(alumno);
     }
-
-   
-    
+        public void printAlumnos(){  
+        for(Alumno alumno:alumnos){
+                System.out.println("Nombre: "+alumno.getNombre()+" "+ alumno.getApellidoPaterno()+" "+ alumno.getApellidoMaterno());
+                System.out.println("Boleta " +alumno.getBoleta());
+            }
+        }
 }

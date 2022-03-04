@@ -4,6 +4,9 @@
  */
 package mx.com.upiicsa.controlescolar2;
 
+import java.util.ArrayList;
+import mx.com.upiicsa.controlescolar2.academia.Curso;
+
 /**
  *
  * @author eavch
@@ -14,6 +17,12 @@ public class Profesor {
     private String apellidoPaterno;
     private String apellidoMaterno;
     private String numeroEmpleado;
+    private ArrayList<Curso> cursos;
+    
+    public Profesor()
+    {
+        cursos = new ArrayList<>();
+    }
     //curso//
 
     public String getRfc() {
@@ -55,4 +64,17 @@ public class Profesor {
     public void setNumeroEmpleado(String numeroEmpleado) {
         this.numeroEmpleado = numeroEmpleado;
     }
+    
+    public void addCurso(Curso curso){
+        cursos.add(curso);
+    }
+    public void printCurso(){  
+        for(var curso:cursos){
+                System.out.println(curso.getHorario());
+                System.out.println(curso.getMateria());
+                System.out.println(curso.getProfesor());
+                curso.printAlumnos();
+                
+            }
+        }
 }

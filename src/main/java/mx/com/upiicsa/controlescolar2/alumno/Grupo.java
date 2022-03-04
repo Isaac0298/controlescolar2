@@ -40,22 +40,5 @@ public class Grupo {
             System.out.println(materia.getCreditos());
         }
     }
-    /*
-    public static void main(String[] args) {
-        Materia materia1 = new Materia();
-        materia1.setNombre("Algebra");
-        materia1.setCreditos("4.5");
-        
-        Materia materia2 = new Materia();
-        materia2.setNombre("Sociologia");
-        materia2.setCreditos("6.5");
-        
-        Grupo grupo1 = new Grupo();
-        grupo1.setSecuencia("26NV65");
-        grupo1.addMateria(materia1);
-        grupo1.addMateria(materia2);
-        grupo1.printList();
-        
-    }
-*/
+
 }
